@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%;}
+
+$main-white-color: #F8F8F8;
+$main-blue-color: #1A557A;
+$lighter-blue-color: #4B9AB1;
+$main-orange-color: #ED975A;
+
+body::-webkit-scrollbar
+{ width: 14px; }
+
+body::-webkit-scrollbar-track
+{ background: $main-white-color; }
+
+body::-webkit-scrollbar-thumb
+{ background: $main-orange-color; }
+
+
+// Importing Sass components
+@import "./header.scss";
+@import "./countries.scss";
+
+
+#wrapper { width: 100%; }
+
+#background
+{
+  width: 100vw; height: 100vh; z-index: -1; position: fixed;
+  background: url("../assets/campsite.png") no-repeat center center / cover;
+}

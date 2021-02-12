@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #F8F8F8;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ED975A;
+}
+
+header {
+  color: #1A557A;
+}
+header nav {
+  text-align: center;
+}
+header nav ul {
+  font: 22px "Poppins";
+  list-style: none;
+  font-weight: 700;
+  display: inline-flex;
+  margin: 20px;
+}
+header nav ul li {
+  padding: 10px 14px;
+  margin: 10px 30px;
+  border-radius: 30px;
+  transition: 0.4s background, 0.25s color;
+}
+header nav ul li:hover {
+  background-color: #ED975A;
+  color: #F8F8F8;
+  cursor: pointer;
+}
+@media (max-width: 599px) {
+  header {
+    color: black;
+  }
+  header nav {
+    padding-top: 10px;
+  }
+  header nav ul {
+    display: inline-block;
+  }
+  header nav ul li {
+    width: 160px;
+  }
+}
+header h1 {
+  font: 58px "Poppins";
+  font-weight: 700;
+  padding: 30px 0 5px 0;
+  text-align: center;
+}
+header h2 {
+  font: 36px "Poppins";
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#button {
+  position: absolute;
+  font: 23px "Poppins";
+  color: #F8F8F8;
+  font-weight: 700;
+  background-color: #4B9AB1;
+  width: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px 18px;
+  transition: 0.3s background;
+}
+
+#button:hover {
+  background-color: #ED975A;
+  cursor: pointer;
+}
+
+section ul {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 40px 30px;
+  left: 50%;
+}
+section ul li {
+  padding: 10px 12px;
+  margin: 10px 10px;
+  background-color: #1A557A;
+  border: 2px solid black;
+  transition: 0.15s background, 0.6s border-radius;
+  box-shadow: 0px 0px 7px black;
+  border-radius: 12px;
+}
+section ul li p {
+  font: 22px "Poppins";
+  color: #F8F8F8;
+}
+section ul li:hover {
+  background-color: #4B9AB1;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  background: url("../assets/campsite.png") no-repeat center center/cover;
+}
+
+/*# sourceMappingURL=index.css.map */

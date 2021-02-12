@@ -1,0 +1,2 @@
+# Life Quality :earth_africa:
+Life Quality is a service about describing life quality in each of the country, it's made with Next.js and Sass. It's using teleport.org public API to fetch from and display certain data like countries etc.
