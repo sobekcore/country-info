@@ -1,59 +1,62 @@
 // Each Country details styling
 
 #wrapper
-{ padding-bottom: 10px; }
-
-#country-info
 {
-  background-color: $lighter-blue-color;
-  font-family: "Poppins";
-  margin: 80px 120px;
-  padding: 20px 35px;
-  border-radius: 15px;
-  border: 3px black solid;
-  box-shadow: inset 0 0 20px $main-blue-color;
+  padding-bottom: 10px;
+  position: absolute;
 
-  hr
+  #country-info
   {
-    background-color: $main-blue-color;
-    height: 5px; border: none;
-    border-radius: 5px;
-    margin: 9px 0;
-  }
+    background-color: $lighter-blue-color;
+    font-family: "Poppins";
+    margin: 80px 120px;
+    padding: 20px 35px;
+    border-radius: 15px;
+    border: 3px black solid;
+    box-shadow: inset 0 0 20px $main-blue-color;
 
-  #title
-  {
-    margin-bottom: 30px;
-
-    h1
+    hr
     {
-      font-size: 56px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      color: $main-white-color;
-      text-shadow: 6px 4px $main-blue-color;
+      background-color: $main-blue-color;
+      height: 5px; border: none;
+      border-radius: 5px;
+      margin: 9px 0;
     }
 
-    a
+    #title
     {
-      text-decoration: none;
-      color: $main-blue-color;
-      font-size: 28px;
-      font-weight: 400;
+      margin-bottom: 30px;
+
+      h1
+      {
+        font-size: 56px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: $main-white-color;
+        text-shadow: 6px 4px $main-blue-color;
+      }
+
+      a
+      {
+        text-decoration: none;
+        color: $main-blue-color;
+        font-size: 28px;
+        font-weight: 400;
+      }
     }
-  }
 
-  ul
-  {
-    font-size: 22px;
-    list-style: none;
-
-    li
+    ul
     {
-      padding: 5px 4px;
+      font-size: 22px;
+      list-style: none;
 
-      #admin-div
-      { list-style-type: disc; margin: 5px 0 0 35px;}
+      li
+      {
+        padding: 5px 4px;
+
+        #admin-div
+        { list-style-type: disc; margin: 5px 0 0 35px;}
+      }
     }
   }
 }

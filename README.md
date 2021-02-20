@@ -1,2 +1,2 @@
 # Country Info :earth_africa:
-Country Info is a service about describing statistics in each of the country, it's made with Next.js and Sass. It's using teleport.org public API to fetch from and display certain data like countries, pupulation, continent etc.
+Country Info is a service about showing statistics in each of the country, it's made with Next.js and Sass. It's using teleport.org public API to fetch from and display certain data like countries, pupulation, continent etc.

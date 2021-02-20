@@ -8,6 +8,7 @@
 html, body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -15,11 +16,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #F8F8F8;
+  background: #508BA5;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #ED975A;
+  background: #1A557A;
 }
 
 header {
@@ -93,41 +94,90 @@ header h2 {
   cursor: pointer;
 }
 
-section ul {
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 30px 30px 60px 30px;
-  left: 50%;
+#wrapper #colored-bg {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-color: #508BA5;
 }
-section ul li {
-  padding: 10px 12px;
+#wrapper #background {
+  position: absolute;
+  z-index: -1;
+}
+#wrapper #background #scroll-bg, #wrapper #background #continue {
+  width: 100vw;
+  position: absolute;
+}
+#wrapper #background #scroll-bg {
+  background: url("../assets/campsite.png") no-repeat center center/cover;
+  height: 100vh;
+  animation: easeIn 1.4s;
+  animation-fill-mode: forwards;
+  animation-delay: 200ms;
+}
+@keyframes easeIn {
+  from {
+    background-position: center center;
+  }
+  to {
+    background-position: center bottom;
+  }
+}
+#wrapper #background #continue {
+  background: url("../assets/connector.png") no-repeat center top/cover;
+  margin-top: calc(100vh - 1px);
+  height: 16.7vh;
+}
+
+#wrapper {
+  position: absolute;
+}
+#wrapper #countries-intro {
+  font: 24px "Poppins";
+  color: #F8F8F8;
+  text-align: center;
+  margin: 100px 0 120px 0;
+  background-color: #4B9AB1;
+  padding: 40px 20px;
+  box-shadow: 0px 0px 30px black, inset 0 0 60px #1A557A;
+}
+#wrapper #country-names ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1140px;
+  width: 100%;
+  margin: 30px auto 50px auto;
+}
+#wrapper #country-names ul li {
+  padding: 10px 14px;
   margin: 10px 10px;
   background-color: #4B9AB1;
   border: 2px solid #1A557A;
   text-shadow: 3px 2px #1A557A;
   border-radius: 12px;
+  text-align: center;
   box-shadow: 0px 0px 7px #191919, inset 0 0 14px #1A557A;
   transition: 0.15s background, 0.6s border-radius, 0.5s box-shadow, 0.6s filter;
 }
-section ul li p {
+#wrapper #country-names ul li p {
   font: bold 22px "Poppins";
   color: #F8F8F8;
 }
-section ul li:hover {
+#wrapper #country-names ul li:hover {
   background-color: #4B9AB1;
   cursor: pointer;
   border-radius: 40px;
   filter: brightness(1.15);
-  box-shadow: 0px 0px 20px black, inset 4px 4px 16px #F8F8F8;
+  box-shadow: 0px 0px 20px black, inset 5px 5px 16px #B2C2C4;
 }
 
 #wrapper {
   padding-bottom: 10px;
+  position: absolute;
 }
-
-#country-info {
+#wrapper #country-info {
   background-color: #4B9AB1;
   font-family: "Poppins";
   margin: 80px 120px;
@@ -136,47 +186,71 @@ section ul li:hover {
   border: 3px black solid;
   box-shadow: inset 0 0 20px #1A557A;
 }
-#country-info hr {
+#wrapper #country-info hr {
   background-color: #1A557A;
   height: 5px;
   border: none;
   border-radius: 5px;
   margin: 9px 0;
 }
-#country-info #title {
+#wrapper #country-info #title {
   margin-bottom: 30px;
 }
-#country-info #title h1 {
+#wrapper #country-info #title h1 {
   font-size: 56px;
   letter-spacing: 2px;
   font-weight: 700;
   color: #F8F8F8;
   text-shadow: 6px 4px #1A557A;
 }
-#country-info #title a {
+#wrapper #country-info #title a {
   text-decoration: none;
   color: #1A557A;
   font-size: 28px;
   font-weight: 400;
 }
-#country-info ul {
+#wrapper #country-info ul {
   font-size: 22px;
   list-style: none;
 }
-#country-info ul li {
+#wrapper #country-info ul li {
   padding: 5px 4px;
 }
-#country-info ul li #admin-div {
+#wrapper #country-info ul li #admin-div {
   list-style-type: disc;
   margin: 5px 0 0 35px;
 }
 
 #wrapper {
-  width: 100%;
+  width: 100vw;
 }
 
-#background {
+#animate-in {
+  position: fixed;
+  animation: 1s loadIn;
+  animation-fill-mode: forwards;
   width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+
+@keyframes loadIn {
+  0% {
+    background-color: #1a557a;
+  }
+  15% {
+    background-color: #1a557a;
+  }
+  99% {
+    background-color: rgba(26, 85, 122, 0);
+  }
+  100% {
+    background-color: rgba(26, 85, 122, 0);
+    visibility: hidden;
+  }
+}
+#static-bg {
+  width: 100%;
   height: 100vh;
   z-index: -1;
   position: fixed;

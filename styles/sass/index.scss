@@ -1,33 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { width: 100%; height: 100%;}
+html, body { width: 100%; height: 100%; overflow-x: hidden; }
 
 $main-white-color: #F8F8F8;
 $main-blue-color: #1A557A;
 $lighter-blue-color: #4B9AB1;
 $main-orange-color: #ED975A;
+$blue-background-color: #508BA5;
 
 body::-webkit-scrollbar
 { width: 14px; }
 
 body::-webkit-scrollbar-track
-{ background: $main-white-color; }
+{ background: $blue-background-color; }
 
 body::-webkit-scrollbar-thumb
-{ background: $main-orange-color; }
+{ background: $main-blue-color; }
 
 
 // Importing Sass components
 @import "./header.scss";
+@import "./background.scss";
 @import "./countries.scss";
 @import "./country-info.scss";
 
 
-#wrapper { width: 100%; }
+#wrapper { width: 100vw; }
 
-#background
+#animate-in
 {
-  width: 100vw; height: 100vh; z-index: -1; position: fixed;
+  position: fixed;
+  animation: 1s loadIn;
+  animation-fill-mode: forwards;
+  width: 100vw; height: 100vh;
+  z-index: 99;
+}
+
+@keyframes loadIn
+{
+  0% { background-color: rgba(26, 85, 122, 1); }
+  15% { background-color: rgba(26, 85, 122, 1); }
+  99% { background-color: rgba(26, 85, 122, 0); }
+  100% {
+    background-color: rgba(26, 85, 122, 0);
+    visibility: hidden;
+  }
+}
+
+#static-bg
+{
+  width: 100%; height: 100vh; z-index: -1; position: fixed;
   background: url("../assets/campsite.png") no-repeat center center / cover;
 }

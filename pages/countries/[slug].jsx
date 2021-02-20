@@ -1,7 +1,8 @@
 import Header from "../../components/header";
 import Background from "../../components/background";
+import AnimateIn from "../../components/animate-in";
 
-export default function Country({ data1, data2, data3 })
+export default function Country({ data1, data2 })
 {
   // Console logging for debugging
   console.log("Data1:", data1);
@@ -9,6 +10,8 @@ export default function Country({ data1, data2, data3 })
 
   return(
     <div id="wrapper">
+      <div id="colored-bg"></div>
+      <AnimateIn />
       <Background />
       <Header />
         <article id="country-info">
