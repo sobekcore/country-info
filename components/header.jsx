@@ -5,8 +5,8 @@ export default function Header()
   return(
     <header>
       <Navigation />
-      <h1>Life Quality</h1>
-      <h2>Todays living standards</h2>
+      <h1>Country Info</h1>
+      <h2>your country statistics</h2>
     </header>
   );
 }

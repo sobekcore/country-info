@@ -6,7 +6,7 @@ function App({ Component, pageProps })
   return(
     <>
       <Head>
-        <title>Life Quality</title>
+        <title>Country Info</title>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <Component {...pageProps} />

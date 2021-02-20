@@ -21,6 +21,7 @@ body::-webkit-scrollbar-thumb
 // Importing Sass components
 @import "./header.scss";
 @import "./countries.scss";
+@import "./country-info.scss";
 
 
 #wrapper { width: 100%; }

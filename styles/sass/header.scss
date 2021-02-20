@@ -20,15 +20,11 @@ header
       {
         padding: 10px 14px;
         margin: 10px 30px;
-        border-radius: 30px;
-        transition: .4s background, .25s color;
+        transition: .2s color;
       }
 
       li:hover
-      {
-        background-color: $main-orange-color;
-        color: $main-white-color; cursor: pointer;
-      }
+      { color: $main-orange-color; cursor: pointer; }
     }
   }
 
@@ -52,14 +48,14 @@ header
   {
     font: 58px "Poppins";
     font-weight: 700;
-    padding: 30px 0 5px 0;
+    padding: 30px 0 0px 0;
     text-align: center;
   }
 
   h2
   {
-    font: 36px "Poppins";
-    margin-bottom: 40px;
+    font: 34px "Poppins";
+    margin-bottom: 45px;
     text-align: center;
   }
 }
@@ -68,20 +64,29 @@ header
 {
   position: absolute;
   // Font & colors
-  font: 23px "Poppins";
+  font: 21px "Poppins";
+  letter-spacing: 1px;
   color: $main-white-color;
   font-weight: 700;
   background-color: $lighter-blue-color;
+  box-shadow: 4px 4px $main-blue-color;
   // Positioning & size
-  width: 180px; left: 50%;
+  left: 50%;
   transform: translateX(-50%);
   border-radius: 30px;
   text-align: center;
   margin-top: 20px;
-  padding: 14px 18px;
+  padding: 16px 28px;
   // Animation
-  transition: .3s background;
+  transition:
+    .3s background,
+    .3s transform,
+    .3s box-shadow;
 }
 
 #button:hover
-{ background-color: $main-orange-color; cursor: pointer; }
+{
+  background-color: $main-orange-color;
+  box-shadow: 4px 4px #9E653C;
+  cursor: pointer;
+}

@@ -7,11 +7,6 @@ const API_NAME = "https://api.teleport.org/api/countries/";
 export default function Countries({ data })
 {
   // Console logging for debugging
-  fetch(`${API_NAME}`)
-  .then(response => response.json())
-  .then(result =>{ console.log(result); }
-  );
-
   console.log(data);
 
   return(
@@ -20,11 +15,13 @@ export default function Countries({ data })
       <Header />
       <section>
         <ul>
-          {/* Using each country name to creata a temporary Wikipedia link */}
+          {/* Using each country name to create a custom [slug] link */}
           {data.map(d =>
-            <Link href={`https://en.wikipedia.org/wiki/${d.name}`}>
-              <li key={d.name}><p>{d.name}</p></li>
-            </Link>
+            <div key={d.name}>
+              <Link href={`/countries/${d.href.substr(50,52)}`}>
+                <li><p>{d.name}</p></li>
+              </Link>
+            </div>
           )}
         </ul>
       </section>

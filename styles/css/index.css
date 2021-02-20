@@ -38,12 +38,10 @@ header nav ul {
 header nav ul li {
   padding: 10px 14px;
   margin: 10px 30px;
-  border-radius: 30px;
-  transition: 0.4s background, 0.25s color;
+  transition: 0.2s color;
 }
 header nav ul li:hover {
-  background-color: #ED975A;
-  color: #F8F8F8;
+  color: #ED975A;
   cursor: pointer;
 }
 @media (max-width: 599px) {
@@ -63,33 +61,35 @@ header nav ul li:hover {
 header h1 {
   font: 58px "Poppins";
   font-weight: 700;
-  padding: 30px 0 5px 0;
+  padding: 30px 0 0px 0;
   text-align: center;
 }
 header h2 {
-  font: 36px "Poppins";
-  margin-bottom: 40px;
+  font: 34px "Poppins";
+  margin-bottom: 45px;
   text-align: center;
 }
 
 #button {
   position: absolute;
-  font: 23px "Poppins";
+  font: 21px "Poppins";
+  letter-spacing: 1px;
   color: #F8F8F8;
   font-weight: 700;
   background-color: #4B9AB1;
-  width: 180px;
+  box-shadow: 4px 4px #1A557A;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 30px;
   text-align: center;
   margin-top: 20px;
-  padding: 14px 18px;
-  transition: 0.3s background;
+  padding: 16px 28px;
+  transition: 0.3s background, 0.3s transform, 0.3s box-shadow;
 }
 
 #button:hover {
   background-color: #ED975A;
+  box-shadow: 4px 4px #9E653C;
   cursor: pointer;
 }
 
@@ -98,26 +98,77 @@ section ul {
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
-  margin: 40px 30px;
+  margin: 30px 30px 60px 30px;
   left: 50%;
 }
 section ul li {
   padding: 10px 12px;
   margin: 10px 10px;
-  background-color: #1A557A;
-  border: 2px solid black;
-  transition: 0.15s background, 0.6s border-radius;
-  box-shadow: 0px 0px 7px black;
+  background-color: #4B9AB1;
+  border: 2px solid #1A557A;
+  text-shadow: 3px 2px #1A557A;
   border-radius: 12px;
+  box-shadow: 0px 0px 7px #191919, inset 0 0 14px #1A557A;
+  transition: 0.15s background, 0.6s border-radius, 0.5s box-shadow, 0.6s filter;
 }
 section ul li p {
-  font: 22px "Poppins";
+  font: bold 22px "Poppins";
   color: #F8F8F8;
 }
 section ul li:hover {
   background-color: #4B9AB1;
   cursor: pointer;
   border-radius: 40px;
+  filter: brightness(1.15);
+  box-shadow: 0px 0px 20px black, inset 4px 4px 16px #F8F8F8;
+}
+
+#wrapper {
+  padding-bottom: 10px;
+}
+
+#country-info {
+  background-color: #4B9AB1;
+  font-family: "Poppins";
+  margin: 80px 120px;
+  padding: 20px 35px;
+  border-radius: 15px;
+  border: 3px black solid;
+  box-shadow: inset 0 0 20px #1A557A;
+}
+#country-info hr {
+  background-color: #1A557A;
+  height: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 9px 0;
+}
+#country-info #title {
+  margin-bottom: 30px;
+}
+#country-info #title h1 {
+  font-size: 56px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #F8F8F8;
+  text-shadow: 6px 4px #1A557A;
+}
+#country-info #title a {
+  text-decoration: none;
+  color: #1A557A;
+  font-size: 28px;
+  font-weight: 400;
+}
+#country-info ul {
+  font-size: 22px;
+  list-style: none;
+}
+#country-info ul li {
+  padding: 5px 4px;
+}
+#country-info ul li #admin-div {
+  list-style-type: disc;
+  margin: 5px 0 0 35px;
 }
 
 #wrapper {
