@@ -7,7 +7,6 @@
   #countries-intro
   {
     font: 24px "Poppins";
-    color: $main-white-color;
     text-align: center;
     margin: 100px 0 120px 0;
     background-color: $lighter-blue-color;
@@ -43,7 +42,12 @@
           .5s box-shadow,
           .6s filter;
 
-        p { font: bold 22px "Poppins"; color: $main-white-color; }
+        p
+        {
+          font: 22px "Poppins";
+          color: $main-white-color;
+          font-weight: 700
+        }
       }
 
       li:hover

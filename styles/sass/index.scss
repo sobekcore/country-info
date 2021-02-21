@@ -16,7 +16,7 @@ body::-webkit-scrollbar-track
 { background: $blue-background-color; }
 
 body::-webkit-scrollbar-thumb
-{ background: $main-blue-color; }
+{ background: $main-blue-color; border-radius: 7px; }
 
 
 // Importing Sass components
@@ -24,6 +24,7 @@ body::-webkit-scrollbar-thumb
 @import "./background.scss";
 @import "./countries.scss";
 @import "./country-info.scss";
+@import "./about.scss";
 
 
 #wrapper { width: 100vw; }
@@ -52,4 +53,15 @@ body::-webkit-scrollbar-thumb
 {
   width: 100%; height: 100vh; z-index: -1; position: fixed;
   background: url("../assets/campsite.png") no-repeat center center / cover;
+}
+
+@media(max-width: 799px)
+{
+  #wrapper
+  {
+    #country-info
+    {
+      margin: 80px 20px;
+    }
+  }
 }

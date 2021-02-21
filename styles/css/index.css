@@ -21,6 +21,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #1A557A;
+  border-radius: 7px;
 }
 
 header {
@@ -135,7 +136,6 @@ header h2 {
 }
 #wrapper #countries-intro {
   font: 24px "Poppins";
-  color: #F8F8F8;
   text-align: center;
   margin: 100px 0 120px 0;
   background-color: #4B9AB1;
@@ -162,8 +162,9 @@ header h2 {
   transition: 0.15s background, 0.6s border-radius, 0.5s box-shadow, 0.6s filter;
 }
 #wrapper #country-names ul li p {
-  font: bold 22px "Poppins";
+  font: 22px "Poppins";
   color: #F8F8F8;
+  font-weight: 700;
 }
 #wrapper #country-names ul li:hover {
   background-color: #4B9AB1;
@@ -202,6 +203,7 @@ header h2 {
   font-weight: 700;
   color: #F8F8F8;
   text-shadow: 6px 4px #1A557A;
+  word-break: break-all;
 }
 #wrapper #country-info #title a {
   text-decoration: none;
@@ -219,6 +221,20 @@ header h2 {
 #wrapper #country-info ul li #admin-div {
   list-style-type: disc;
   margin: 5px 0 0 35px;
+}
+
+#country-info #about #about-title {
+  text-align: center;
+}
+#country-info #about #about-title h1 {
+  font: 50px "Poppins";
+  color: #F8F8F8;
+  text-shadow: 6px 4px #1A557A;
+  font-weight: 700;
+}
+#country-info #about #about-text {
+  margin: 16px 0;
+  font: 22px "Poppins";
 }
 
 #wrapper {
@@ -255,6 +271,12 @@ header h2 {
   z-index: -1;
   position: fixed;
   background: url("../assets/campsite.png") no-repeat center center/cover;
+}
+
+@media (max-width: 799px) {
+  #wrapper #country-info {
+    margin: 80px 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

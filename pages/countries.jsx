@@ -9,7 +9,7 @@ const API_NAME = "https://api.teleport.org/api/countries/";
 export default function Countries({ data })
 {
   // Console logging for debugging
-  console.log(data);
+  // console.log(data);
 
   return(
     <div id="wrapper">

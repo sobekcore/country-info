@@ -5,8 +5,8 @@ import AnimateIn from "../../components/animate-in";
 export default function Country({ data1, data2 })
 {
   // Console logging for debugging
-  console.log("Data1:", data1);
-  console.log("Data2:\n", data2);
+  // console.log("Data1:", data1);
+  // console.log("Data2:", data2);
 
   return(
     <div id="wrapper">

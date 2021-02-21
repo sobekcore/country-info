@@ -1,0 +1,26 @@
+// About Page Styling
+
+#country-info
+{
+  #about
+  {
+    #about-title
+    {
+      text-align: center;
+
+      h1
+      {
+        font: 50px "Poppins";
+        color: $main-white-color;
+        text-shadow: 6px 4px $main-blue-color;
+        font-weight: 700;
+      }
+    }
+
+    #about-text
+    {
+      margin: 16px 0;
+      font: 22px "Poppins";
+    }
+  }
+}
